@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Notepad</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Веб-блокнот</h1>
+  
+  <form action="/add-note" method="POST">
+    <textarea name="note" placeholder="Введите вашу заметку..." required></textarea>
+    <button type="submit">Добавить</button>
+  </form>
+
+  <h2>Ваши заметки:</h2>
+  <ul>
+    <% notes.forEach(note => { %>
+      <li><%= note.content %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
