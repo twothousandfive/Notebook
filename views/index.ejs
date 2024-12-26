@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>Веб-блокнот</h1>
+  <h1>NOTEPAD</h1>
   
   <form action="/add-note" method="POST">
     <textarea name="note" placeholder="Введите вашу заметку..." required></textarea>
     <button type="submit">Добавить</button>
   </form>
 
-  <h2>Ваши заметки:</h2>
+  <h2>Заметки:</h2>
   <ul>
     <% notes.forEach(note => { %>
       <li>
